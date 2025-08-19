@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Villa Website</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+    }
+
+    /* Top Bar */
+    .top-bar {
+        background: #f7f7f7;
+        padding: 5px 40px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        color: #555;
+    }
+
+    .top-bar span {
+        margin-right: 15px;
+    }
+
+    /* Navigation */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    nav a.active {
+        color: orange;
+    }
+
+    .btn {
+        background: orange;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        background: url('villa.jpg') no-repeat center center/cover;
+        height: 90vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+
+    .hero .location {
+        background: rgba(255,255,255,0.8);
+        color: #555;
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        font-weight: bold;
+        max-width: 500px;
+        line-height: 1.2;
+    }
+        /* Top Bar */
+    .top-bar {
+        background: #f7f7f7;
+        padding: 5px 40px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        color: #555;
+    }
+
+    .top-bar span {
+        margin-right: 15px;
+    }
+
+    /* Navigation */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    nav a.active {
+        color: orange;
+    }
+
+    .btn {
+        background: orange;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        background: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') no-repeat center center/cover;
+        height: 90vh;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+
+    .hero .location {
+        background: rgba(255,255,255,0.8);
+        color: #555;
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 15px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        font-weight: bold;
+        max-width: 500px;
+        line-height: 1.2;
+    }
+
+    /* Second Section */
+    .features {
+        display: flex;
+        padding: 50px 40px;
+        gap: 30px;
+    }
+
+    .features img {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .feature-text {
+        flex: 1;
+    }
+
+    .feature-text small {
+        color: orange;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .feature-text h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .feature-text p {
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .feature-list {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+        width: 250px;
+    }
+
+    .feature-item {
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    .feature-item:last-child {
+        border-bottom: none;
+    }
+
+    .feature-item h4 {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .feature-item p {
+        margin: 5px 0 0;
+        color: #777;
+        font-size: 14px;
+    }
+    /* Video Section */
+    
+ .section {
+    text-align: center;
+    padding: 50px 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('video-bg.jpg') center/cover no-repeat;
+    color: white;
+}
+
+    .section small {
+        color: #ff4d2d;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .section h1 {
+        font-size: 2.2rem;
+        margin: 10px 0;
+        font-weight: bold;
+    }
+
+    .video-box {
+        position: relative;
+        max-width: 800px;
+        margin: -50px auto 40px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .video-box img {
+        width: 100%;
+        display: block;
+    }
+
+    .play-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ff4d2d;
+        border-radius: 50%;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .play-btn:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 15px solid white;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .stat {
+        background: #ffe9e2;
+        padding: 20px 30px;
+        border-radius: 10px;
+        min-width: 150px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        position: relative;
+    }
+
+    .stat::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        background: #ff4d2d;
+        border-radius: 50%;
+    }
+
+    .stat h2 {
+        font-size: 2rem;
+        color: #ff4d2d;
+        margin: 0;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+        margin: 5px 0 0;
+        font-weight: bold;
+        color: #333;
+    }
+     .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+    }
+
+    .top-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .left-info {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    h4 {
+        color: #e63946;
+        margin-bottom: 5px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .property-details {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        margin-top: 20px;
+    }
+
+    .property-details p {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .property-details p:last-child {
+        border-bottom: none;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .buttons {
+        margin-top: 20px;
+    }
+
+    .buttons button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    .btn-orange {
+        background-color: #f25c27;
+        color: white;
+    }
+
+    .btn-black {
+        background-color: black;
+        color: white;
+    }
+
+    .middle-img {
+        flex: 2;
+        text-align: center;
+    }
+
+    .middle-img img {
+        width: 75%;
+        border-radius: 10px;
+    }
+
+    .right-info {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .right-info h3 {
+        margin-top: 0;
+    }
+
+    .schedule-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border-radius: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+        border: none;
+    }
+
+    .schedule-btn span {
+        background: #f25c27;
+        padding: 8px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+
+    /* Bottom section */
+    .bottom-section {
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    .bottom-section h4 {
+        color: #e63946;
+    }
+
+    .bottom-section h2 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+/* General Styles */
+    
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+nav a.active {
+  color: orange;
+}
+.visit-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner {
+  background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+  height: 250px;
+  position: relative;
+}
+.banner-overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.banner-content {
+  color: white;
+  margin-left: 5%;
+}
+.banner-content p {
+  font-size: 14px;
+}
+.banner-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Filters */
+.filters {
+  text-align: center;
+  margin: 30px 0;
+}
+.filters button {
+  border: none;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filters button.active {
+  background: orange;
+}
+
+/* Properties Grid */
+.properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.property-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+.property-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.property-card .tag {
+  display: inline-block;
+  margin: 10px 0;
+  background: #ffe8d6;
+  color: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.property-card h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+.property-card ul {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  margin: 15px 0;
+}
+.property-card button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  background: #f1f1f1;
+  padding: 8px 12px;
+  margin: 0 3px;
+  border-radius: 5px;
+}
+.pagination a.active {
+  background: orange;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .visit-btn {
+    padding: 8px 12px;
+  }
+}
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: 
+        url('contact-bg.jpg') center/cover no-repeat;
+    border-radius: 0px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+    .contact-container h4 {
+        color: #e63946;
+        margin-bottom: 5px;
+    }
+
+    .contact-container h1 {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .contact-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .map {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .contact-form {
+        flex: 1;
+        min-width: 300px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 1px 3px 10px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+    }
+
+    .contact-form textarea {
+        resize: none;
+        height: 120px;
+        border-radius: 15px;
+    }
+
+    .contact-form button {
+        background-color: black;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border: 1px solid #ddd;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease; 
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .info-box {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        min-width: 250px;
+    }
+
+    .info-box i {
+        font-size: 24px;
+        color: #f25c27;
+    }
+
+    .info-box p {
+        margin: 0;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .info-box strong {
+        display: block;
+        font-size: 16px;
+        color: black;
+    }
+
+    footer {
+        background: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .contact-content {
+            flex-direction: column;
+        }
+    }
+
+  
+</style>
+
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div>
+        <span>📧 info@company.com</span>
+        <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+</div>
+
+<!-- Navigation -->
+<header>
+    <h2>VILLA</h2>
+    <nav>
+        <a href="" class="active">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="propertydetails.html">Property Details</a>
+        <a href="contact us.html">Contact Us</a>
+    </nav>
+    <a href="#" class="btn">Schedule a visit</a>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="background-image: url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2');">
+    <div>
+        <div class="location">Toronto, Canada</div>
+        <h1>HURRY!<br>GET THE BEST<br>VILLA FOR YOU</h1>
+    </div>
+</section>
+
+
+<section class="features">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Apartment Interior">
+    
+    <div class="feature-text">
+        <small>Featured</small>
+        <h2>Best Apartment & Sea View</h2>
+        <p><strong>Best useful links?</strong></p>
+        <p>Get the <strong>best villa</strong> website template in HTML CSS and Bootstrap for your business. XYZ provides you the <a href="#">best service</a> in the world. Please tell your friends about it.</p>
+        <p>How does this work?</p>
+        <p>Why is Villa Agency the best?</p>
+    </div>
+
+    <div class="feature-list">
+        <div class="feature-item">
+            <h4 >250 m²</h4>
+            <p>otal Flat Space</p>
+        </div>
+        <div class="feature-item">
+            <h4>Contract</h4>
+            <p>Contract Ready</p>
+        </div>
+        <div class="feature-item">
+            <h4>Payment</h4>
+            <p>Payment Process</p>
+        </div>
+        <div class="feature-item">
+            <h4>Safety</h4>
+            <p>24/7 Under Control</p>
+        </div>
+    </div>
+   
+</section>
+<section>
+     <div class="section">
+    <small>| Video View</small>
+    <h1>Get Closer View &<br>Different Feeling</h1>
+</div>
+
+<div class="video-box">
+    <img src="video-frame.jpg" alt="Living Room">
+    <div class="play-btn"></div>
+</div>
+
+<div class="stats">
+    <div class="stat">
+        <h2>34</h2>
+        <p>Buildings<br>Finished Now</p>
+    </div>
+    <div class="stat">
+        <h2>12</h2>
+        <p>Years<br>Experience</p>
+    </div>
+    <div class="stat">
+        <h2>24</h2>
+        <p>Awards<br>Won 2023</p>
+    </div>
+</div>
+</section>
+<section>
+    <div class="container">
+    <div class="top-section">
+        <!-- Left Info -->
+        <div class="left-info">
+            <h4>| BEST DEAL</h4>
+            <h1>Find Your Best Deal<br>Right Now!</h1>
+            <div class="property-details">
+                <p>Total Flat Space <span class="bold">185 m2</span></p>
+                <p>Floor number <span class="bold">26th</span></p>
+                <p>Number of rooms <span class="bold">4</span></p>
+                <p>Parking Available <span class="bold">Yes</span></p>
+                <p>Payment Process <span class="bold">Bank</span></p>
+            </div>
+        </div>
+
+        <!-- Middle Image -->
+        <div class="middle-img">
+            <div class="buttons">
+                <button class="btn-orange">Appartment</button>
+                <button class="btn-black">Villa House</button>
+                <button class="btn-black">Penthouse</button>
+            </div>
+            <img src="deal-01.jpg" alt="Property Image">
+        </div>
+
+        <!-- Right Info -->
+        <div class="right-info">
+            <h3>Extra Info About Property</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.</p>
+            <p>When you need best websites, you can simply type XYZ in any search engine website. In addition, you can type XYZ Portfolio, XYZ One Page Layouts, etc.</p>
+            <button class="schedule-btn"><span>📅</span> Schedule a visit</button>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <h4>| PROPERTIES</h4>
+        <h2>We Provide The Best<br>Property You Like</h2>
+    </div>
+</div>
+</section>
+<section>
+  <!-- Properties Grid -->
+  <section class="properties container">
+    <!-- Property Card -->
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-01.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$2,264,000</h3>
+      <p>18 Old Street Miami, OR 97219</p>
+      <ul>
+        <li>Bedrooms: 8</li>
+        <li>Bathrooms: 8</li>
+        <li>Area: 545m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 6 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+
+    <!-- Repeat property cards -->
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-02.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$1,180,000</h3>
+      <p>54 New Street Florida, OR 27001</p>
+      <ul>
+        <li>Bedrooms: 6</li>
+        <li>Bathrooms: 5</li>
+        <li>Area: 450m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 8 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-03.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$1,460,000</h3>
+      <p>26 Mid Street Portland, OR 38540</p>
+      <ul>
+        <li>Bedrooms: 6</li>
+        <li>Bathrooms: 5</li>
+        <li>Area: 225m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 10 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+  </section>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+  </div>
+</section>
+<section>
+    
+<div class="contact-container">
+    <h4>| CONTACT US</h4>
+    <h1>Get In Touch With<br>Our Agents</h1>
+
+    <div class="contact-content">
+        <!-- Map -->
+     <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.979676243502!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c2b2d2e1%3A0x7d0b0b0b0b0b0b0b!2sBangalore%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1699999999" allowfullscreen="" loading="lazy"></iframe>
+</div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <input type="text" placeholder="Your Name...">
+            <input type="email" placeholder="Your E-mail...">
+            <input type="text" placeholder="Subject...">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+        <div class="info-box">
+            <i>📞</i>
+            <div>
+                <strong>010-020-0340</strong>
+                <p>Phone Number</p>
+            </div>
+        </div>
+        <div class="info-box">
+            <i>✉️</i>
+            <div>
+                <strong>info@villa.co</strong>
+                <p>Business Email</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: XYZ
+</footer>
+
+</section>
+</body>
+</html>

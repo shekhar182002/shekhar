@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Properties</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Top bar */
+.top-bar {
+  background: #f8f8f8;
+  font-size: 14px;
+  padding: 10px 0;
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+nav a.active {
+  color: orange;
+}
+.visit-btn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Banner */
+.banner {
+  background: url('https://via.placeholder.com/1600x400') center/cover no-repeat;
+  height: 250px;
+  position: relative;
+}
+.banner-overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.banner-content {
+  color: white;
+  margin-left: 5%;
+}
+.banner-content p {
+  font-size: 14px;
+}
+.banner-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Filters */
+.filters {
+  text-align: center;
+  margin: 30px 0;
+}
+.filters button {
+  border: none;
+  background: #333;
+  color: white;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filters button.active {
+  background: orange;
+}
+
+/* Properties Grid */
+.properties {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.property-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+.property-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.property-card .tag {
+  display: inline-block;
+  margin: 10px 0;
+  background: #ffe8d6;
+  color: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.property-card h3 {
+  color: red;
+  margin-bottom: 10px;
+}
+.property-card ul {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
+  margin: 15px 0;
+}
+.property-card button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin: 30px 0;
+}
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  background: #f1f1f1;
+  padding: 8px 12px;
+  margin: 0 3px;
+  border-radius: 5px;
+}
+.pagination a.active {
+  background: orange;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .visit-btn {
+    padding: 8px 12px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Info Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>📧 info@company.com</span>
+      <span>📍 Sunny Isles Beach, FL 33160</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">VILLA</div>
+      <nav>
+        <a href="TRY.HTML">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="propertydetails.html">Property Details</a>
+        <a href="contact us.html">Contact Us</a>
+      </nav>
+      <button class="visit-btn">Schedule a visit</button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-overlay">
+      <div class="banner-content">
+        <p>HOME / PROPERTIES</p>
+        <h1>PROPERTIES</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters container">
+    <button class="active">Show All</button>
+    <button class="active">Apartment</button>
+    <button class="active">Villa House</button>
+    <button class="active">Penthouse</button>
+  </section>
+
+  <!-- Properties Grid -->
+  <section class="properties container">
+    <!-- Property Card -->
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-01.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$2,264,000</h3>
+      <p>18 Old Street Miami, OR 97219</p>
+      <ul>
+        <li>Bedrooms: 8</li>
+        <li>Bathrooms: 8</li>
+        <li>Area: 545m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 6 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+
+    <!-- Repeat property cards -->
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-02.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$1,180,000</h3>
+      <p>54 New Street Florida, OR 27001</p>
+      <ul>
+        <li>Bedrooms: 6</li>
+        <li>Bathrooms: 5</li>
+        <li>Area: 450m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 8 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+
+    <div class="property-card">
+      <img src="C:\Users\SHEKHAR\OneDrive\Desktop\villa html\property-03.jpg" alt="Property">
+      <span class="tag">Luxury Villa</span>
+      <h3>$1,460,000</h3>
+      <p>26 Mid Street Portland, OR 38540</p>
+      <ul>
+        <li>Bedrooms: 6</li>
+        <li>Bathrooms: 5</li>
+        <li>Area: 225m²</li>
+        <li>Floor: 3</li>
+        <li>Parking: 10 spots</li>
+      </ul>
+      <button>Schedule a visit</button>
+    </div>
+  </section>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+    <a href="#" class="active"></a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: XYZ</p>
+    </div>
+  </footer>
+
+</body>
+</html>

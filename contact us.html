@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Villa</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    /* Top Info Bar */
+    .top-bar {
+        background: #f7f7f7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 15%;
+        font-size: 14px;
+    }
+    .top-bar div {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    .top-bar i {
+        color: orange;
+        margin-right: 5px;
+    }
+
+    /* Navigation */
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15%;
+        background: white;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+    .btn-visit {
+        background: orange;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Banner */
+    .banner {
+        background: url('contact-bg.jpg') center/cover no-repeat;
+        padding: 60px 15%;
+        color: white;
+        text-align: center;
+    }
+    .banner h1 {
+        font-size: 36px;
+        background: rgba(0,0,0,0.6);
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+    .breadcrumb {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: white;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 15%;
+        gap: 40px;
+    }
+    .contact-info {
+        flex: 1;
+    }
+    .contact-info h3 {
+        color: red;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .contact-info h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .contact-box {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        border: 1px solid #eee;
+    }
+    .contact-box i {
+        color: red;
+        font-size: 20px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        flex: 1;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+    }
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+        outline: none;
+    }
+    .contact-form button {
+        background: black;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    /* Map */
+    .map {
+        margin: 0 15% 50px 15%;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* Footer */
+    footer {
+        background: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div>
+        <i>📧</i> info@company.com
+        <i>📍</i> Sunny Isles Beach, FL 33160
+    </div>
+    <div>
+        <i>🔵</i> FB
+        <i>🐦</i> TW
+        <i>📸</i> IG
+    </div>
+</div>
+
+<!-- Navigation -->
+<nav>
+    <h2>VILLA</h2>
+    <ul>
+        <li><a href="TRY.HTML">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="propertydetails.html">Property Details</a></li>
+        <li><a href="contact us.html" style="color:red;">Contact Us</a></li>
+    </ul>
+    <a href="#" class="btn-visit">Schedule a visit</a>
+</nav>
+
+<!-- Banner -->
+<div class="banner">
+    <div class="breadcrumb">Home / Contact Us</div>
+    <h1>CONTACT US</h1>
+</div>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="contact-info">
+        <h3>| CONTACT US</h3>
+        <h2>Get In Touch With Our Agents</h2>
+        <p>When you really need to download best websites, please remember our website XYZ. 
+           Thank you for visiting. If you need more information, please contact us.</p>
+        <div class="contact-box">
+            <i>📞</i>
+            <div>
+                <strong>010-020-0340</strong><br>
+                Phone Number
+            </div>
+        </div>
+        <div class="contact-box">
+            <i>✉</i>
+            <div>
+                <strong>info@villa.co</strong><br>
+                Business Email
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <input type="text" placeholder="Your Name...">
+        <input type="email" placeholder="Your E-mail...">
+        <input type="text" placeholder="Subject...">
+        <textarea placeholder="Your Message" rows="5"></textarea>
+        <button>Send Message</button>
+    </div>
+</section>
+
+<!-- Google Map -->
+<div class="map">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.979676243502!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c2b2d2e1%3A0x7d0b0b0b0b0b0b0b!2sBangalore%2C%20Karnataka%2C%20India!5e0!3m2!1sen!2sin!4v1699999999" 
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+</div>
+
+<!-- Footer -->
+<footer>
+    Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. Design: XYZ
+</footer>
+
+</body>
+</html>
